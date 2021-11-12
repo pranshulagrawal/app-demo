@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchVM" type="com.application.app.modules.search.data.viewmodel.SearchVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_29pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <EditText
+                    android:background="@drawable/rectangle_border_light_blue_a200_radius_5"
+                    android:drawableEnd="@drawable/img_group_40"
+                    android:drawablePadding="@dimen/_5pxh"
+                    android:drawableStart="@drawable/img_search_icon"
+                    android:hint="@string/lbl_nike_air_max"
+                    android:id="@+id/etNikeAirMax"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_weight="1.6"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_12pxv"
+                    android:singleLine="true"
+                    android:text="@={searchVM.searchModel.etNikeAirMaxValue}"
+                    android:textColorHint="@color/indigo_900" style="@style/etRoundedOutline_1"/>
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxv"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_mic_icon"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linear2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_356pxv"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <View android:background="@color/blue_50"
+                    android:id="@+id/line"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_6pxh" android:layout_width="@dimen/_369pxh"/>
+                <LinearLayout android:id="@+id/linear3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:clickable="true"
+                        android:gravity="top|start"
+                        android:id="@+id/txtNikeAirMax27"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:text="@{searchVM.searchModel.txtNikeAirMax27}"
+                        style="@style/txtSolid" tools:text="@string/msg_nike_air_max_27"/>
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtNikeAirVaporm"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:text="@{searchVM.searchModel.txtNikeAirVaporm}"
+                        style="@style/txtSolid" tools:text="@string/msg_nike_air_vaporm"/>
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtNikeAirMax28"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:text="@{searchVM.searchModel.txtNikeAirMax28}"
+                        style="@style/txtSolid" tools:text="@string/msg_nike_air_max_27"/>
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtNikeAirMax273"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:text="@{searchVM.searchModel.txtNikeAirMax273}"
+                        style="@style/txtSolid" tools:text="@string/msg_nike_air_max_273"/>
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtNikeAirVaporm2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:text="@{searchVM.searchModel.txtNikeAirVaporm2}"
+                        style="@style/txtSolid" tools:text="@string/msg_nike_air_vaporm2"/>
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtNikeAirMax97"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:text="@{searchVM.searchModel.txtNikeAirMax97}"
+                        style="@style/txtSolid" tools:text="@string/msg_nike_air_max_97"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

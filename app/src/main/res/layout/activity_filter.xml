@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="filterVM" type="com.application.app.modules.filter.data.viewmodel.FilterVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_23pxv"
+                    android:layout_marginStart="@dimen/_18pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_close_icon"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtFilterSearch"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_212pxh"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:text="@{filterVM.filterModel.txtFilterSearch}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/lbl_filter_search"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linear2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_50pxv"
+                android:layout_marginTop="@dimen/_47pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtPriceRange"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="wrap_content"
+                    android:text="@{filterVM.filterModel.txtPriceRange}"
+                    style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_price_range"/>
+                <LinearLayout android:id="@+id/linear3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:gravity="center|start"
+                        android:id="@+id/txt1245"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:text="@{filterVM.filterModel.txt1245}"
+                        style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_1_245"/>
+                    <TextView android:gravity="center|start"
+                        android:id="@+id/txt9344"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_16pxh"
+                        android:layout_marginStart="@dimen/_13pxh"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:text="@{filterVM.filterModel.txt9344}"
+                        style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_9_344"/>
+                </LinearLayout>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtCondition"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_36pxv"
+                    android:layout_width="wrap_content"
+                    android:text="@{filterVM.filterModel.txtCondition}"
+                    style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_condition"/>
+                <LinearLayout android:id="@+id/linear4"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:gravity="center"
+                        android:id="@+id/btnNew"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_50pxv"
+                        android:layout_width="@dimen/_59pxh"
+                        android:text="@string/lbl_new"
+                        android:textAllCaps="false"
+                        style="@style/btnRoundedOutline" tools:text="@string/lbl_new"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:gravity="center"
+                        android:id="@+id/btnUsed"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_50pxv"
+                        android:layout_marginStart="@dimen/_9pxh"
+                        android:layout_width="@dimen/_65pxh"
+                        android:text="@string/lbl_used"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded_2" tools:text="@string/lbl_used"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:gravity="center"
+                        android:id="@+id/btnNotSpecified"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_50pxv"
+                        android:layout_marginEnd="@dimen/_98pxh"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_width="@dimen/_120pxh"
+                        android:text="@string/lbl_not_specified"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded_2" tools:text="@string/lbl_not_specified"/>
+                </LinearLayout>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtBuyingFormat"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_24pxv"
+                    android:layout_width="wrap_content"
+                    android:text="@{filterVM.filterModel.txtBuyingFormat}"
+                    style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_buying_format"/>
+                <LinearLayout android:id="@+id/linear5"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linear6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnAllListings"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_width="@dimen/_99pxh"
+                            android:text="@string/lbl_all_listings"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_all_listings"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnAcceptsOffers"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:text="@string/lbl_accepts_offers"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRounded_2" tools:text="@string/lbl_accepts_offers"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnAuction"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_width="@dimen/_81pxh"
+                            android:text="@string/lbl_auction"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_auction"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear7"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnBuyItNow"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_width="@dimen/_98pxh"
+                            android:text="@string/lbl_buy_it_now"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_buy_it_now"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnClassifiedAds"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_marginEnd="@dimen/_96pxh"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_width="@dimen/_123pxh"
+                            android:text="@string/lbl_classified_ads"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_classified_ads"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtItemLocation"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_24pxv"
+                    android:layout_width="wrap_content"
+                    android:text="@{filterVM.filterModel.txtItemLocation}"
+                    style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_item_location"/>
+                <LinearLayout android:id="@+id/linear8"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linear9"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnUsOnly"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_width="@dimen/_81pxh"
+                            android:text="@string/lbl_us_only"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_us_only"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnNorthAmerica"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_weight="1.3"
+                            android:layout_width="0dp"
+                            android:text="@string/lbl_north_america"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRounded_2" tools:text="@string/lbl_north_america"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnEurope"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_width="@dimen/_77pxh"
+                            android:text="@string/lbl_europe"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_europe"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:gravity="center"
+                        android:id="@+id/btnAsia"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_50pxv"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="@dimen/_59pxh"
+                        android:text="@string/lbl_asia"
+                        android:textAllCaps="false"
+                        style="@style/btnRoundedOutline" tools:text="@string/lbl_asia"/>
+                </LinearLayout>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtShowOnly"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_24pxv"
+                    android:layout_width="wrap_content"
+                    android:text="@{filterVM.filterModel.txtShowOnly}"
+                    style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_show_only"/>
+                <LinearLayout android:id="@+id/linear10"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linear11"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnFreeReturns"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_width="@dimen/_112pxh"
+                            android:text="@string/lbl_free_returns"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_free_returns"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnReturnsAccepte"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_44pxh"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="@string/msg_returns_accepte"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRounded_2" tools:text="@string/msg_returns_accepte"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear12"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnAuthorizedSell"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_width="0dp"
+                            android:text="@string/msg_authorized_sell"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/msg_authorized_sell"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnCompletedItems"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_22pxh"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="@string/lbl_completed_items"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_completed_items"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear13"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnSoldItems"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_width="@dimen/_101pxh"
+                            android:text="@string/lbl_sold_items"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRounded_2" tools:text="@string/lbl_sold_items"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnDealsSavings"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_70pxh"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_weight="0.9"
+                            android:layout_width="0dp"
+                            android:text="@string/lbl_deals_savings"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_deals_savings"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear14"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnSaleItems"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_width="@dimen/_99pxh"
+                            android:text="@string/lbl_sale_items"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_sale_items"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnListedAsLots"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxv"
+                            android:layout_marginEnd="@dimen/_89pxh"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_width="@dimen/_118pxh"
+                            android:text="@string/lbl_listed_as_lots"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/lbl_listed_as_lots"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linear15"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnSearchInDescr"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:text="@string/msg_search_in_descr"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRounded_2" tools:text="@string/msg_search_in_descr"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:gravity="center"
+                            android:id="@+id/btnBenefitsCharit"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8pxh"
+                            android:layout_weight="0.9"
+                            android:layout_width="0dp"
+                            android:text="@string/msg_benefits_charit"
+                            android:textAllCaps="false"
+                            style="@style/btnRoundedOutline" tools:text="@string/msg_benefits_charit"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:gravity="center"
+                        android:id="@+id/btnAuthenticityVe"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_authenticity_ve"
+                        android:textAllCaps="false"
+                        style="@style/btnRoundedOutline" tools:text="@string/msg_authenticity_ve"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:clickable="true" android:gravity="center"
+                    android:id="@+id/btnApply"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_28pxv"
+                    android:layout_width="match_parent"
+                    android:text="@string/lbl_apply"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded" tools:text="@string/lbl_apply"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentMethod1RowModel" type="com.application.app.modules.paymentmethod.data.model.PaymentMethod1RowModel"/>
+    </data>
+    <LinearLayout android:clickable="true" android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblue_50">
+        <LinearLayout android:id="@+id/linear1"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/image"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_24pxv"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY" android:src="@drawable/img_credit_card_icon"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtCreditCardOr"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3pxv"
+                android:layout_marginEnd="@dimen/_185pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_weight="0.8" android:layout_width="0dp"
+                android:text="@{paymentMethod1RowModel.txtCreditCardOr}"
+                style="@style/txtPoppinsbold12_2" tools:text="@string/msg_credit_card_or"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

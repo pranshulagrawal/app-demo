@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationOffer1RowModel" type="com.application.app.modules.notificationoffer.data.model.NotificationOffer1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/image" android:layout_gravity="top"
+            android:layout_height="@dimen/_24pxv"
+            android:layout_marginBottom="@dimen/_110pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_offer_icon_1"/>
+        <LinearLayout android:id="@+id/linear1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_weight="1.7" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtTheBestTitle"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{notificationOffer1RowModel.txtTheBestTitle}"
+                style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_the_best_title"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtCulpaCillumCo"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:text="@{notificationOffer1RowModel.txtCulpaCillumCo}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_culpa_cillum_co"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtApril302014"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent"
+                android:text="@{notificationOffer1RowModel.txtApril302014}"
+                style="@style/txtPoppinsregular10_1" tools:text="@string/msg_april_30_2014"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="shortByVM" type="com.application.app.modules.shortby.data.viewmodel.ShortByVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_left_icon"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtShoryBy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_247pxh"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="@{shortByVM.shortByModel.txtShoryBy}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/lbl_shory_by"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linear2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_366pxv"
+                android:layout_marginTop="@dimen/_28pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:gravity="center|start"
+                    android:id="@+id/txtBestMatch"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:text="@{shortByVM.shortByModel.txtBestMatch}"
+                    style="@style/txtSolid_1" tools:text="@string/lbl_best_match"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtTimeEndingSo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:text="@{shortByVM.shortByModel.txtTimeEndingSo}"
+                    style="@style/txtSolid_2" tools:text="@string/msg_time_ending_so"/>
+                <TextView android:gravity="center|start"
+                    android:id="@+id/txtTimeNewlyLis"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:text="@{shortByVM.shortByModel.txtTimeNewlyLis}"
+                    style="@style/txtSolid_3" tools:text="@string/msg_time_newly_lis"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtPriceShippin"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:text="@{shortByVM.shortByModel.txtPriceShippin}"
+                    style="@style/txtSolid_3" tools:text="@string/msg_price_shippin"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtPriceShippin2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:text="@{shortByVM.shortByModel.txtPriceShippin2}"
+                    style="@style/txtSolid_3" tools:text="@string/msg_price_shippin2"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtDistanceNeare"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:text="@{shortByVM.shortByModel.txtDistanceNeare}"
+                    style="@style/txtSolid_3" tools:text="@string/msg_distance_neare"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

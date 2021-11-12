@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="successScreenVM" type="com.application.app.modules.successscreen.data.viewmodel.SuccessScreenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:gravity="center" android:id="@+id/image"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_72pxv"
+            android:layout_marginEnd="@dimen/_151pxh"
+            android:layout_marginStart="@dimen/_152pxh"
+            android:layout_marginTop="@dimen/_260pxv"
+            android:layout_width="@dimen/_72pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_success_icon"/>
+        <TextView android:gravity="center" android:id="@+id/txtSuccess"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_135pxh"
+            android:layout_marginStart="@dimen/_135pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="wrap_content"
+            android:text="@{successScreenVM.successScreenModel.txtSuccess}"
+            style="@style/txtPoppinsbold24_1" tools:text="@string/lbl_success"/>
+        <TextView android:gravity="top|center"
+            android:id="@+id/txtThankYouForS"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_36pxh"
+            android:layout_marginStart="@dimen/_36pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:text="@{successScreenVM.successScreenModel.txtThankYouForS}"
+            style="@style/txtPoppinsregular12_1" tools:text="@string/msg_thank_you_for_s"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:clickable="true" android:gravity="center"
+            android:id="@+id/btnBackToOrder"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_293pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:text="@string/lbl_back_to_order"
+            android:textAllCaps="false" style="@style/btnSolidRounded" tools:text="@string/lbl_back_to_order"/>
+    </LinearLayout>
+</layout>

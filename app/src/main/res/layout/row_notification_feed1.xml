@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationFeed1RowModel" type="com.application.app.modules.notificationfeed.data.model.NotificationFeed1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/image"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_48pxv"
+            android:layout_marginBottom="@dimen/_56pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_48pxh"
+            android:scaleType="centerCrop"
+            cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_product_image_1}" tools:src="@drawable/img_product_image_1"/>
+        <LinearLayout android:id="@+id/linear1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_weight="1.6" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtNewProduct"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{notificationFeed1RowModel.txtNewProduct}"
+                style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_new_product"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtNikeAirZoomP2"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:text="@{notificationFeed1RowModel.txtNikeAirZoomP2}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_nike_air_zoom_p2"/>
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtJune320155"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:text="@{notificationFeed1RowModel.txtJune320155}"
+                style="@style/txtPoppinsregular10_1" tools:text="@string/msg_june_3_2015_5"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
