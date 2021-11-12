@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVM" type="com.application.app.modules.splash.data.viewmodel.SplashVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frame"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylelight_blue_A200">
+        <ImageView android:gravity="center" android:id="@+id/image"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_72pxv"
+            android:layout_marginBottom="@dimen/_370pxv"
+            android:layout_marginEnd="@dimen/_152pxh"
+            android:layout_marginStart="@dimen/_151pxh"
+            android:layout_marginTop="@dimen/_338pxv"
+            android:layout_width="@dimen/_72pxh"
+            android:scaleType="centerCrop"
+            imageRes="@{@drawable/img_logo}" tools:src="@drawable/img_logo"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notification2VM" type="com.application.app.modules.notification2.data.viewmodel.Notification2VM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_left_icon"/>
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtActivity"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_255pxh"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.4"
+                    android:layout_width="0dp"
+                    android:text="@{notification2VM.notification2Model.txtActivity}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/lbl_activity"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linear2"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_241pxv"
+            android:layout_marginTop="@dimen/_28pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerList"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_1pxh}" tools:itemCount="3" tools:listitem="@layout/row_notification3"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

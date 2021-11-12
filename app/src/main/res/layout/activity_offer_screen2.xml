@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="offerScreen2VM" type="com.application.app.modules.offerscreen2.data.viewmodel.OfferScreen2VM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linear1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:gravity="top|start"
+                    android:id="@+id/txtOffer"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_weight="0.3"
+                    android:layout_width="0dp"
+                    android:text="@{offerScreen2VM.offerScreen2Model.txtOffer}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/lbl_offer"/>
+                <ImageView android:clickable="true"
+                    android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxv"
+                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:layout_marginStart="@dimen/_280pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_notification_icon_2"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linear2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_57pxv"
+                android:layout_marginTop="@dimen/_44pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <EditText
+                    android:background="@drawable/rectangle_bg_light_blue_a200_radius_5"
+                    android:hint="@string/msg_use_megsl_cup"
+                    android:id="@+id/etUseMegslCup"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:singleLine="true"
+                    android:text="@={offerScreen2VM.offerScreen2Model.etUseMegslCupValue}"
+                    android:textColorHint="@color/white_A700" style="@style/etSolidRounded"/>
+                <FrameLayout android:id="@+id/frame"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv" android:layout_width="match_parent">
+                    <ImageView android:id="@+id/image1"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_206pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        cornerRadius="@{@dimen/_5pxh}"
+                        imageRes="@{@drawable/img_promotion_image_1}" tools:src="@drawable/img_promotion_image_1"/>
+                    <LinearLayout android:id="@+id/linear3"
+                        android:layout_gravity="center|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_32pxv"
+                        android:layout_marginEnd="@dimen/_110pxh"
+                        android:layout_marginStart="@dimen/_24pxh"
+                        android:layout_marginTop="@dimen/_32pxv"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <TextView android:gravity="center"
+                            android:id="@+id/txtSuperFlashSal"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@{offerScreen2VM.offerScreen2Model.txtSuperFlashSal}"
+                            style="@style/txtPoppinsbold24" tools:text="@string/msg_super_flash_sal"/>
+                        <LinearLayout android:gravity="center"
+                            android:id="@+id/linear4"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_29pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:gravity="center"
+                                android:id="@+id/btn08"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_41pxv"
+                                android:layout_width="@dimen/_42pxh"
+                                android:text="@string/lbl_08"
+                                android:textAllCaps="false"
+                                style="@style/btnSolidRounded_1" tools:text="@string/lbl_08"/>
+                            <TextView android:gravity="top|center"
+                                android:id="@+id/txtLbl"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_10pxv"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_marginTop="@dimen/_10pxv"
+                                android:layout_weight="0.1"
+                                android:layout_width="0dp"
+                                android:text="@{offerScreen2VM.offerScreen2Model.txtLbl}"
+                                style="@style/txtPoppinsbold14_1" tools:text="@string/lbl"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:gravity="center"
+                                android:id="@+id/btn34"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_41pxv"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_width="@dimen/_42pxh"
+                                android:text="@string/lbl_34"
+                                android:textAllCaps="false"
+                                style="@style/btnSolidRounded_1" tools:text="@string/lbl_34"/>
+                            <TextView android:gravity="center"
+                                android:id="@+id/txtLbl1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_10pxv"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_marginTop="@dimen/_10pxv"
+                                android:layout_weight="0.1"
+                                android:layout_width="0dp"
+                                android:text="@{offerScreen2VM.offerScreen2Model.txtLbl1}"
+                                style="@style/txtPoppinsbold14_1" tools:text="@string/lbl"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:gravity="center"
+                                android:id="@+id/btn52"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_41pxv"
+                                android:layout_marginEnd="@dimen/_59pxh"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_width="@dimen/_42pxh"
+                                android:text="@string/lbl_52"
+                                android:textAllCaps="false"
+                                style="@style/btnSolidRounded_1" tools:text="@string/lbl_52"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frame1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv" android:layout_width="match_parent">
+                    <ImageView android:id="@+id/image2"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_206pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        cornerRadius="@{@dimen/_5pxh}"
+                        imageRes="@{@drawable/img_promotion_image}" tools:src="@drawable/img_promotion_image"/>
+                    <LinearLayout android:id="@+id/linear5"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_64pxv"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_24pxh"
+                        android:layout_marginTop="@dimen/_32pxv"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <TextView android:gravity="top|start"
+                            android:id="@+id/txt90OffSuperM"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@{offerScreen2VM.offerScreen2Model.txt90OffSuperM}"
+                            style="@style/txtPoppinsbold24" tools:text="@string/msg_90_off_super_m"/>
+                        <TextView android:gravity="top|start"
+                            android:id="@+id/txtSpecialBirthda"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16pxv"
+                            android:layout_width="match_parent"
+                            android:text="@{offerScreen2VM.offerScreen2Model.txtSpecialBirthda}"
+                            style="@style/txtPoppinsregular12_2" tools:text="@string/msg_special_birthda"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout android:id="@+id/frame2"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linear6"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_24pxv"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linear7"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:gravity="center"
+                        android:id="@+id/image3"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_home_icon_1"/>
+                    <TextView android:gravity="center"
+                        android:id="@+id/txtHome"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{offerScreen2VM.offerScreen2Model.txtHome}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_home"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linear8"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:gravity="center"
+                        android:id="@+id/image4"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_search_icon_1"/>
+                    <TextView android:gravity="center"
+                        android:id="@+id/txtExplore"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{offerScreen2VM.offerScreen2Model.txtExplore}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center"
+                    android:id="@+id/linear9"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:gravity="center"
+                        android:id="@+id/image5"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_cart_icon_1"/>
+                    <TextView android:gravity="center"
+                        android:id="@+id/txtCart"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{offerScreen2VM.offerScreen2Model.txtCart}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_cart"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linear10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:gravity="center"
+                        android:id="@+id/image6"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_offer_icon_1"/>
+                    <TextView android:gravity="center"
+                        android:id="@+id/txtOffer1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{offerScreen2VM.offerScreen2Model.txtOffer1}"
+                        style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_offer"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linear11"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:gravity="center"
+                        android:id="@+id/image7"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_system_icon_24px_user"/>
+                    <TextView android:gravity="center"
+                        android:id="@+id/txtAccount"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{offerScreen2VM.offerScreen2Model.txtAccount}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_account"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>
